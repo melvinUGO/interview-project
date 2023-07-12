@@ -1,0 +1,260 @@
+:root {
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.center {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/******* header ********/
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  border-bottom: 1px solid grey;
+}
+
+nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+nav > div > ul {
+  display: none;
+  gap: 15px;
+}
+
+.hero {
+  padding: 50px 20px;
+  position: relative;
+  height: 100%;
+}
+
+.hero > div > h1 {
+  max-width: 500px;
+  padding-top: 100px;
+}
+
+.hero .scroll-down-btn {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 540px) {
+  nav > div > ul {
+    display: flex;
+  }
+
+  .hero > div > h1 {
+    max-width: 550px;
+    font-size: 3rem;
+  }
+}
+
+/******* about me ********/
+
+#about-me {
+  background: blue;
+}
+
+#about-me div {
+  padding: 20px;
+}
+
+#about-me div > div {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about-me div > div img {
+  width: 100%;
+  max-width: 400px;
+}
+
+#about-me div > div p {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 540px) {
+  #about-me div > div {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+/******* skills ********/
+
+#skills > div {
+  padding: 20px;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-box {
+  margin: 0 auto;
+  border: 1px solid grey;
+  min-width: 200px;
+  text-align: center;
+}
+
+.skill-box h3 {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+}
+
+.skill-box ul {
+  padding: 10px;
+}
+
+@media screen and (min-width: 540px) {
+  .skill-container {
+    flex-direction: row;
+  }
+
+  .skill-box ul {
+    padding: 20px;
+  }
+}
+
+/******* gallery ********/
+#gallery > div {
+  padding: 20px;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 540px) {
+  .image-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/******* projects ********/
+#projects {
+  background: blue;
+}
+
+#projects > div {
+  padding: 20px;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-box {
+  background: white;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  min-width: 300px;
+}
+
+.project-box:hover {
+  scale: 0.8;
+}
+
+@media screen and (min-width: 540px) {
+  .projects-container {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .project-box {
+    background: white;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+/******* contact me ********/
+#contact > div {
+  padding: 20px;
+}
+
+#contact > div > div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+#contact > div > div a,
+#contact > div > div address {
+  background-color: blue;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 20px;
+}
